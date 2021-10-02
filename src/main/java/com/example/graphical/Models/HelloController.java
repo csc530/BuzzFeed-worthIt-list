@@ -1,9 +1,9 @@
-package com.example.graphical.Controllers;
+package com.example.graphical.Models;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class GraphController{
+public class HelloController{
 	@FXML
 	private Label welcomeText;
 	

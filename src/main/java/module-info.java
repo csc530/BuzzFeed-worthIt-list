@@ -12,6 +12,6 @@ module com.example.graphical {
 	
 	opens com.example.graphical to javafx.fxml;
 	exports com.example.graphical;
-	exports com.example.graphical.Controllers;
-	opens com.example.graphical.Controllers to javafx.fxml;
+	exports com.example.graphical.Models;
+	opens com.example.graphical.Models to javafx.fxml;
 }
