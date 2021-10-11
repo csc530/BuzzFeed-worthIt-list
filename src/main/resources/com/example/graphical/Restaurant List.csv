@@ -1,0 +1,214 @@
+Season,Episode,Episode Name,Price Point,Restaurant,City,Country,Cost,Item,Notes
+1,1,$3 Sushi vs $250 Sushi,$,Sushi Stop,Los Angeles,USA,$4.00,Bluefin Nigiri,
+1,1,$3 Sushi vs $250 Sushi,$,Sushi Stop,Los Angeles,USA,$2.95,Spciy Scallap Roll,
+1,1,$3 Sushi vs $250 Sushi,$,Sushi Stop,Los Angeles,USA,$6.00,Spanish Mackerel,
+1,1,$3 Sushi vs $250 Sushi,$,Sushi Stop,Los Angeles,USA,$2.95,Sweet Shrimp Nigiri,
+1,1,$3 Sushi vs $250 Sushi,$$,Hamasaku,Los Angeles,USA,$18.00,"Kinmedai White Ponzu
+Nigiri Platter
+Cajun Crab Roll",Price per plate
+1,1,$3 Sushi vs $250 Sushi,$$$,Sasabune,Los Angeles,USA,$250.00,Omakase,Dinner for two
+1,2,$4 Burger vs $777 Burger,$,Habit Burger,Las Vegas,USA,$4.15,Double Charburger,
+1,2,$4 Burger vs $777 Burger,$$,Gordon Ramsay Burgr,Las Vegas,USA,$18.00,Hog Burger,
+1,2,$4 Burger vs $777 Burger,$$$,Burger Brasserie,Las Vegas,USA,$777.00,777 Burger,
+1,3,$5 Pizza vs $135 Pizza,$,Blaze Pizza,Los Angeles,USA,$5.25,Simple Pie,
+1,3,$5 Pizza vs $135 Pizza,$,Blaze Pizza,Los Angeles,USA,$7.95,Green Stripe,
+1,3,$5 Pizza vs $135 Pizza,$$,Pizzeria Mozza,Los Angeles,USA,$23.00,Squash Blossoms,
+1,3,$5 Pizza vs $135 Pizza,$$$,Spago,Los Angeles,USA,$135.00,Italian Summer Truffle,
+1,4,$11 Steak vs $306 Steak,$,Uncle John's Cafe,Los Angeles,USA,$11.00,Steak and Eggs,
+1,4,$11 Steak vs $306 Steak,$$,Nick & Stef's Steakhouse,Los Angeles,USA,$72.00,Dry-Aged Rib Eye,
+1,4,$11 Steak vs $306 Steak,$$$,Cut,Los Angeles,USA,$306.00,Japanese Pure Wagyu,
+1,5,$8 Pasta vs $100 Pasta,$,Pasta Sisters,Los Angeles,USA,$8.25,Tagliatella Arrabbiata,
+1,5,$8 Pasta vs $100 Pasta,$,Pasta Sisters,Los Angeles,USA,$15.25,Gnocchi Porcini,
+1,5,$8 Pasta vs $100 Pasta,$,Pasta Sisters,Los Angeles,USA,$12.50,Spaghetti Bottarga,
+1,5,$8 Pasta vs $100 Pasta,$$,Osteria Mamma,Los Angeles,USA,$19.75,Bigoli Neri Alla Bottarga,
+1,5,$8 Pasta vs $100 Pasta,$$,Osteria Mamma,Los Angeles,USA,$19.25,Pappardelle All'anatra,
+1,5,$8 Pasta vs $100 Pasta,$$$,Le Petit Paris,Los Angeles,USA,$100.00,Flambeed White Truffle Pasta,
+1,6,$2 Hot Dog vs $169 Hot Dog,$,Vicious Dogs,Los Angeles,USA,$2.00,Kosher Dog,
+1,6,$2 Hot Dog vs $169 Hot Dog,$,Vicious Dogs,Los Angeles,USA,$6.00,Sweet & Spicy,
+1,6,$2 Hot Dog vs $169 Hot Dog,$$,Wurstküche,Los Angeles,USA,$8.50,Lamb with Mediterranean Spices,
+1,6,$2 Hot Dog vs $169 Hot Dog,$$,Wurstküche,Los Angeles,USA,$8.50,Rattlesnake & Rabbit,
+1,6,$2 Hot Dog vs $169 Hot Dog,$$$,Tokyo Dog,Seattle,USA,$169.00,Juuni Ban,
+1,7,$8 Salmon vs $56 Salmon,$,Emerald City Fish & Chips,Seattle,USA,$8.25,Salmon Fish & Chips,
+1,7,$8 Salmon vs $56 Salmon,$$,Ivar's Salmon House,Seattle,USA,$25.00,Chinook King Salmon,
+1,7,$8 Salmon vs $56 Salmon,$$$,Aqua By El Gaucho,Seattle,USA,$56.00,King Salmon,
+1,8,$24 Korean BBQ vs $346 Korean BBQ,$,OO-KOOK,Los Angeles,USA,$23.99,Korean BBQ,Per person
+1,8,$24 Korean BBQ vs $346 Korean BBQ,$$,Quarters,Los Angeles,USA,$65.44,Korean BBQ,
+1,8,$24 Korean BBQ vs $346 Korean BBQ,$$$,Chosun Galbee,Los Angeles,USA,$345.91,Korean BBQ,
+1,9,$27 Cake vs $1120 Cake,$,Porto's Bakery,Los Angeles,USA,$26.75,Milk'n Berries Cake,Entire cake
+1,9,$27 Cake vs $1120 Cake,$$,Proof Bakery,Los Angeles,USA,$48.00,Chocolate Espresso Cake,Entire cake
+1,9,$27 Cake vs $1120 Cake,$$$,Bottega Louie,Los Angeles,USA,"$1,120.00",Custom Cake,
+2,1,$1 Donut vs $100 Donut,$,Blinkie's Donut Emporium,Los Angeles,USA,$1.00,Glazed Donut,
+,1,$1 Donut vs $100 Donut,$,Blinkie's Donut Emporium,Los Angeles,USA,$1.25,Black & White Donut,
+2,1,$1 Donut vs $100 Donut,$$,The Church Key [CLOSED],Los Angeles,USA,$12.00,Brioche Donuts,3 donuts on the plate
+2,1,$1 Donut vs $100 Donut,$$$,Birdies,Los Angeles,USA,$100.00,Golden Donut,
+2,2,$7 Buffet vs $95 Buffet,$,"Feast Buffet, Red Rock Casino",Las Vegas,USA,$8.99,Buffet Food,
+2,2,$7 Buffet vs $95 Buffet,$$,"Wicked Spoon, The Cosmopolitan",Las Vegas,USA,$49.00,Buffet Food,
+2,2,$7 Buffet vs $95 Buffet,$$$,"The Sterling Brunch, BLT Steak at Bally's",Las Vegas,USA,$95.00,Buffet Food,
+2,3,$47 Taco vs $1 Taco,$,Leo's Taco Truck,Los Angeles,USA,$1.25,Tacos Al Pastor,Per taco
+2,3,$47 Taco vs $1 Taco,$$,Guisados,Los Angeles,USA,$2.75,"Calabacitas
+Mole Poblano
+Cochinita Pibil",Per taco
+2,3,$47 Taco vs $1 Taco,$$$,Rose. Rabbit. Lie,Las Vegas,USA,$47.00,Caviar Taco,
+2,4,$1 Ice Cream vs $1000 Ice Cream,$,Foster's Freeze,Los Angeles,USA,$1.69,Small Dipped Cone,
+2,4,$1 Ice Cream vs $1000 Ice Cream,$$,Scoops,Los Angeles,USA,$3.95,One Scoop Brown Bread Maple Black Truffle,
+2,4,$1 Ice Cream vs $1000 Ice Cream,$$$,Serendipity 3,New York City,USA,"$1,000.00",Golden Opulence Sundae,
+2,5,$2 Pizza vs $2000 Pizza,$,Joe's Pizza,New York City,USA,$2.75,Cheese Slice,
+2,5,$2 Pizza vs $2000 Pizza,$$,"Rossopomodoro, Eataly Flatiron",New York City,USA,$13.00,Marinara Pizza,
+2,5,$2 Pizza vs $2000 Pizza,$$,"Rossopomodoro, Eataly Flatiron",New York City,USA,$18.00,Calzone,
+2,5,$2 Pizza vs $2000 Pizza,$$$,Industry Kitchen,New York City,USA,"$2,000.00",The 24K,
+2,6,$4 Cheesecake vs $70 Cheesecake,$,Eileen's Special Cheesecake,New York City,USA,$3.90,Classic Cheesecake,
+2,6,$4 Cheesecake vs $70 Cheesecake,$$,STK Downtown,New York City,USA,$12.00,Orange Dream Cheesecake,
+2,6,$4 Cheesecake vs $70 Cheesecake,$$$,Lady M,New York City,USA,$70.00,Gateu Nuage,Entire cake
+2,7,$7 Secret Menu vs $2500 Secret Menu,$,Shake Shack,New York City,USA,$6.84,Peanut Butter Bacon Burger,
+2,7,$7 Secret Menu vs $2500 Secret Menu,$$,Gramercy Tavern,New York City,USA,$29.00,Off-Menu Bacon Burger,
+2,7,$7 Secret Menu vs $2500 Secret Menu,$$$,Petrossian,New York City,USA,"$2,500.00",Caviar Souffle,
+2,8,$6 Cocktail vs $208 Cocktail,$,Good Times at Davey Wayne's,Los Angeles,USA,$6.00,Davey's Old Fashioned,
+2,8,$6 Cocktail vs $208 Cocktail,$$,Pacific Seas @ Clifton's,Los Angeles,USA,$40.00,Scorpion Bowl,
+2,8,$6 Cocktail vs $208 Cocktail,$$$,£10 @ The Montage Hotel,Los Angeles,USA,$208.00,Penicillin,
+2,9,$2 Egg vs $95 Egg,$,Lao Tao,Los Angeles,USA,$2.00,Oolong Tea-Infused Egg,1 egg
+2,9,$2 Egg vs $95 Egg,$$,Connie and Ted's,Los Angeles,USA,$18.00,Peeky Toe Crab & Lobster Omelette,
+2,9,$2 Egg vs $95 Egg,$$$,Mélisse,Los Angeles,USA,$95.00,Truggle Egg,
+2,10,$13 BBQ Ribs vs $256 BBQ Ribs,$,Gangnam Galmegi,Seoul,Korea,$13.00,Beef Rib Finger Meat,
+2,10,$13 BBQ Ribs vs $256 BBQ Ribs,$$,So Deul Nyuk,Seoul,Korea,$28.00,Soy Marinated Beef Ribs,
+2,10,$13 BBQ Ribs vs $256 BBQ Ribs,$$$,Walkerhill Myongwolgwan,Seoul,Korea,$256.00,Hanwoo 'Byeongpung' Beef Ribs,
+3,1,$3 Mac 'n Cheese vs $195 Mac 'n Cheese,$,Chef Marilyn's,Los Angeles,USA,$3.00,Mac & Cheese,
+3,1,$3 Mac 'n Cheese vs $195 Mac 'n Cheese,$$,Little Jewel of New Orleans,Los Angeles,USA,$13.99,Craw Mac Deluxe,
+3,1,$3 Mac 'n Cheese vs $195 Mac 'n Cheese,$$$,Barton G.,Los Angeles,USA,$195.00,Truffle Lobster Mac & Cheese,
+3,2,$7 BBQ Ribs vs $68 BBQ Ribs,$,Bigmista's Barbecue & Sammich Shop,Long Beach,USA,$7.00,1/2 lb Pork Spare Ribs,
+3,2,$7 BBQ Ribs vs $68 BBQ Ribs,$$,Barrel & Ashes,Studio City,USA,$36.00,Pork Spare Ribs,No sides
+3,2,$7 BBQ Ribs vs $68 BBQ Ribs,$$$,Maple Block Meat Co,Culver City,USA,$68.00,Full Rack Pork Spare Ribs,No sides
+3,3,$3 Seafood vs $213 Seafood,$,Doyle's Oyster Bar,Sydney,Australia,$3.00,"Coffin Bay Oyster
+Sydney Rock Oyster",Price per oyster in Australian Dollars
+3,3,$3 Seafood vs $213 Seafood,$$,Cirrus,Sydney,Australia,$42.00,Grilled WA Marren,Price in Australian Dollars
+3,3,$3 Seafood vs $213 Seafood,$$$,Silks,Melbourne,Australia,$213.00,Braised Whole Green Lip Abalone,Price in Australian Dollars
+3,4,$18 Wine vs $1000 Wine,$,Tahbilk Winery,Nagambie,Australia,$17.95,2016 Marsanne,Price in Australian Dollars
+3,4,$18 Wine vs $1000 Wine,$$,Fowles Wine,Avenel,Australia,$35.00,Ladies Who Shoot Their Lunch 2016 Shiraz,Price in Australian Dollars
+3,4,$18 Wine vs $1000 Wine,$$$,All Saints Estate Winery,Wahgunyah,Australia,"$1,000.00","Museum Muscadelle
+Museum Muscat",Price per bottle in Australian Dollars
+3,5,$16 Steak vs $150 Steak,$,The Clovelly Hotel,Sydney,Australia,$16.00,250g Rump Steak with Beans and Mash,Price in Australian Dollars
+3,5,$16 Steak vs $150 Steak,$$,Donovan's,Melbourne,Australia,$63.00,500g Grass Fed T-Bone,Price in Australian Dollars
+3,5,$16 Steak vs $150 Steak,$$$,Rockpool Bar & Grill,Sydney,Australia,$69.00,Eye of Chuck Wagyu Ox,Price in Australian Dollars
+3,5,$16 Steak vs $150 Steak,$$$,Rockpool Bar & Grill,Sydney,Australia,$150.00,300g Sirloin ,Price in Australian Dollars
+3,6,$17 Fried Chicken vs $500 Fried Chicken,$,Sylvia's Restaurant,New York City,USA,$16.95,Sylvia's Down Home Fried Chicken,
+3,6,$17 Fried Chicken vs $500 Fried Chicken,$$,Red Rooster,New York City,USA,$27.00,Hot Honey Yard Bird,
+3,6,$17 Fried Chicken vs $500 Fried Chicken,$$$,Momofuku Noodle Bar,New York City,USA,$500.00,Caviar & Fried Chicken,4-6 people
+3,7,$19 Brunch vs $113 Brunch,$,Homestead,Los Angeles,USA,$18.75,"Trinity
+Blanco
+Pecos
+Lil Queso
+Iced Toddy L",
+3,7,$19 Brunch vs $113 Brunch,$$,A-Frame,Culver City,USA,$30.00,"All You Can Drink
+All You Can Eat Stacks on Stacks",
+3,7,$19 Brunch vs $113 Brunch,$$$,The Belvedere,Los Angeles,USA,$113.00,"Brunch Buffet
+Free Flow Champagne",
+3,8,$3 Ramen vs $79 Ramen,$,Rinrin,Tokyo,Japan,$3.00,Ramen,
+3,8,$3 Ramen vs $79 Ramen,$$,Tsuta Japanese Soba Noodles,Tokyo,Japan,$8.00,Shobu Soba,
+3,8,$3 Ramen vs $79 Ramen,$$$,Genei Tokyo,Tokyo,Japan,$79.00,Ultimate Ramen & Highest Grade Iberico Pork Shabu Shabu Course,Multiple courses
+3,9,$1 Coffee vs $914 Coffee,$,R.O.Star,Tokyo,Japan,$1.00,Bitter Sweet Blend Iced Coffee,
+3,9,$1 Coffee vs $914 Coffee,$$,Coffee Elementary School,Tokyo,Japan,$4.00,C.E.S. Blend,
+3,9,$1 Coffee vs $914 Coffee,$$$,The Münch,Osaka,Japan,$914.00,22 Year Barrel-Aged Coffee,
+3,10,$7 Cake vs $208 Cake,$,Pablo Coffee,Osaka,Japan,$7.00,Pablo Cheese Tart,
+3,10,$7 Cake vs $208 Cake,$$,Théobroma,Tokyo,Japan,$23.00,San Joaquin Dos,
+3,10,$7 Cake vs $208 Cake,$$$,Patisserie Satsuki,Tokyo,Japan,$208.00,Extra Super Melon Shortcake,Entire cake
+3,11,$10 Game Day Food vs $456 Game Day Food,$,Pajarito,St Paul,USA,$10.00,Queso Fundido,
+3,11,$10 Game Day Food vs $456 Game Day Food,$$,Revival,Minneapolis,USA,$29.00,Whole Bird Tennessee Hot,Shareable dish
+3,11,$10 Game Day Food vs $456 Game Day Food,$$$,Chowgirls Killer Catering,Minneapolis,USA,$456.00,Chowgirls Super Bowl Feast,
+4,1,$2 Bacon vs $100 Bacon,$,Cheeky's,Palm Springs,USA,$6.00,Bacon Flight,5 slices of bacon
+4,1,$2 Bacon vs $100 Bacon,$$,Manuela,Los Angeles,USA,$18.00,BLT,
+4,1,$2 Bacon vs $100 Bacon,$$$,Belly (CLOSED),New York City,USA,$100.00,Omakase,
+4,2,$1 Bagel vs $1000 Bagel,$,Utopia Bagels,New York City,USA,$1.00,Regular Bagel,
+4,2,$1 Bagel vs $1000 Bagel,$$,Bar Bolonat (CLOSED),New York City,USA,$7.00,Jerusalem Bagel,
+4,2,$1 Bagel vs $1000 Bagel,$$$,The Westin,New York City,USA,"$1,000.00",The $1000 Bagel,
+4,3,$10 Vegan vs $135 Vegan,$,Seasoned Vegan,New York City,USA,$10.00,Po'boy,
+4,3,$10 Vegan vs $135 Vegan,$$,Avant Garden,New York City,USA,$64.00,"4 dishes:
+Sunchoke Toast
+Avocado
+Hen of the Woods
+Celery Root","Individual dishes, not a degustation meun"
+4,3,$10 Vegan vs $135 Vegan,$$$,ABCV,New York City,USA,$184.00,"6 dishes:
+Green Chickpea Hummus
+Grilled Donko Shitake
+Slow Roasted Beets
+Whole Roasted Cauliflower
+Market Carrots
+Warm Crimini & Chanterelle Mushrooms","Individual dishes, not a degustation meun"
+4,4,$9 Fish vs $140 Fish,$,Ahi Assassins,Honolulu,USA,$9.00,Lunatic/Haiwaiian Style,Price per bowl
+4,4,$9 Fish vs $140 Fish,$,Ahi Assassins,Honolulu,USA,$15.00,Bag of Bones,
+4,4,$9 Fish vs $140 Fish,$$,MW Restaurant,Honolulu,USA,$38.00,Mochi-Crusted Onaga,
+4,4,$9 Fish vs $140 Fish,$$,MW Restaurant,Honolulu,USA,$12.00,Tropical Fruit Creamsicle Brulee,
+4,4,$9 Fish vs $140 Fish,$$$,Chef Mavro,Honolulu,USA,$140.00,Onaga Baked in Salt Crust,
+4,5,$5 Pie vs $250 Pie,$,Pie 'n Burger,Pasadena,USA,$4.50,Apple Pie,
+4,5,$5 Pie vs $250 Pie,$$,Underbelly,Houston,USA,$9.00,Carrot Cake Fried Pie,
+4,5,$5 Pie vs $250 Pie,$$$,Three Brothers Bakery,Houston,USA,$250.00,Pumpecapple Piecake,For the entire cake
+4,6,$7 Pho vs $68 Pho,$,Pho Binh By Night,Houston,USA,$6.75,Pho Bo,
+4,6,$7 Pho vs $68 Pho,$$,The Pig and the Lady,Honolulu,USA,$16.00,Pho Bac,
+4,6,$7 Pho vs $68 Pho,$$,The Pig and the Lady,Honolulu,USA,$20.00,Mary's Free Range Duck Pho,
+4,6,$7 Pho vs $68 Pho,$$,The Pig and the Lady,Honolulu,USA,$16.00,Vegan Pho,
+4,6,$7 Pho vs $68 Pho,$$$,District One Kitchen & Bar,Las Vegas,USA,$67.94,The Original Whole Maine Lobster Pho,
+4,7,$12 Pork vs $715 Pork,$,Rice Bar,Los Angeles,USA,$11.25,House-Made Pork Longganisa,
+4,7,$12 Pork vs $715 Pork,$$,Lasa,Los Angeles,USA,$21.00,Twice Cooked Pork Belly,
+4,7,$12 Pork vs $715 Pork,$$$,Jeepney,New York City,USA,$715.00,Kamayan,$55 per person
+4,8,$8 Toast vs $20 Toast,$,Sqirl,Los Angeles,USA,$8.00,Famed Ricotta Toast,
+4,8,$8 Toast vs $20 Toast,$$,Here's Looking at You,Los Angeles,USA,$10.00,Chicken Liver,
+4,8,$8 Toast vs $20 Toast,$$,Here's Looking at You,Los Angeles,USA,$16.00,Stracciatella,
+4,8,$8 Toast vs $20 Toast,$$$,Petit Crenn,San Francisco,USA,$20.00,Mushroom Tartine,
+4,9,$15 Spaghetti vs $143 Spaghetti,$,Barzotto,San Francisco,USA,$15.00,Extra Long Noodles Spaghetti,
+4,9,$15 Spaghetti vs $143 Spaghetti,$,Barzotto,San Francisco,USA,$18.00,Porchetta,
+4,9,$15 Spaghetti vs $143 Spaghetti,$$,Cento Pasta Bar,Los Angeles,USA,$18.00,Beet Spaghetti,
+4,9,$15 Spaghetti vs $143 Spaghetti,$$$,Republique Restaurant,Los Angeles,USA,$143.00,Spaghetti Rustichella,Without truffle dish is $38.00
+4,10,$3 Fries vs $100 Fries,$,Top Round Roast Beef,Los Angeles,USA,$2.99,Curly Fries,
+4,10,$3 Fries vs $100 Fries,$$,Lov,Montreal,Canada,$8.00,Kimchi Fries,Canadian Dollars
+4,10,$3 Fries vs $100 Fries,$$$,Poutineville,Montreal,Canada,$100.00,La Crise Cardiaque (The Heart Attack),Canadian Dollars
+4,11,$10 Cheesesteak vs $120 Cheesesteak,$,John's Roast Pork,Philadelphia,USA,$9.25,"Cheesteak (Onions, Provolone)",
+4,11,$10 Cheesesteak vs $120 Cheesesteak,$$,Gin & Pop,Philadelphia,USA,$14.00,Local Mushroom Cheesesteak,
+4,11,$10 Cheesesteak vs $120 Cheesesteak,$$$,Barclay Prime,Philadelphia,USA,$120.00,Barclay Prime Cheesesteak,
+4,12,$2 Peking Duck vs $340 Peking Duck,$,Corner 28,New York City,USA,$1.25,Peking Duck Bun,
+4,12,$2 Peking Duck vs $340 Peking Duck,$$,Decoy,New York City,USA,$85.00,Peking Duck," 12 pancakes, 3 sauces"
+4,12,$2 Peking Duck vs $340 Peking Duck,Side trip,Little One,New York City,USA,$7.00,Matcha Kakigori,
+4,12,$2 Peking Duck vs $340 Peking Duck,$$$,Hwa Yuan Szechuan,New York City,USA,$340.00,Beijing Duck 9 Course Tasting Menu,$85 per person
+5,1,$29 vs $180 Family-Style Meats,$,Little Fatty,Los Angeles,USA,$29.00,Chinese BBQ Pork,Feeds 4-7
+5,1,$29 vs $180 Family-Style Meats,$$,Freedman's,Los Angeles,USA,$105.00,Glazed Brisket,Feeds 3-5
+5,1,$29 vs $180 Family-Style Meats,$$$,APL,Los Angeles,USA,$180.00,APL Short Rib,Feeds ??
+5,2,$2 Curry vs $75 Curry,$,Fay Da Bakery,New York City,USA,$2.25,Curry Beef Puff,
+5,2,$2 Curry vs $75 Curry,$$,Laut,New York City,USA,$8.00,Roti Canai,
+5,2,$2 Curry vs $75 Curry,$$,Laut,New York City,USA,$15.00,Curry Laksa,
+5,2,$2 Curry vs $75 Curry,$$$,Junoon,New York City,USA,$75.00,"3 courses: 
+Butter Pepper Garlic Shrimp
+Shahi Lamb Shank
+The Drunken Shahi Tukra",
+5,3,$1 Cookie vs $90 Cookie,$,Mah-Ze-Dahr Bakery,New York City,USA,$1.00,Vanilla Shortbread,
+5,3,$1 Cookie vs $90 Cookie,$$,Levain Bakery,New York City,USA,$4.00,Chocolate Chip Walnut Cookie,
+5,3,$1 Cookie vs $90 Cookie,$$$,Antolpo,Japan,Japan,$90.00,Icing Cookie,
+5,4,$1 Sushi vs $133 Sushi,$,Kura Sushi,Japan,Japan,$1.00,Various Sushi Plates,Starts at $1 per plate
+5,4,$1 Sushi vs $133 Sushi,$$,Sushi Dokoro Shun,Japan,Japan,$44.00,Sushi Platter,
+5,4,$1 Sushi vs $133 Sushi,$$$,Kyubey,Japan,Japan,$133.00,Sushi Degustation,
+5,5,$1 Eggs vs $89 Eggs,$,Marutake,Japan,Japan,$1.00,Tamagoyaki,
+5,5,$1 Eggs vs $89 Eggs,$$,The Yoshokuya Kichi Kichi,Japan,Japan,,Ox Tongue Stew,
+5,5,$1 Eggs vs $89 Eggs,$$,The Yoshokuya Kichi Kichi,Japan,Japan,$24.00,Omaurice,
+5,5,$1 Eggs vs $89 Eggs,$$$,Aqua Farm Chichibu,Japan,Japan,$89.00,Fresh Kagayaki eggs,Box of 10 eggs
+5,5,$1 Eggs vs $89 Eggs,Side trip,Maccha House Kiyomizu-Dera,Japan,Japan,,Maccha Parfe and Tiramisu,
+5,6,$6 Sandwich vs $180 Sandwich,$,Bolton's Spicy Chicken & Fish,Nashville,USA,$5.75,Breast Quarter Sandwich,Various spice levels available
+5,6,$6 Sandwich vs $180 Sandwich,$$,The Oinkster,Los Angeles,USA,$11.50,Oinkster Pastrami,
+5,6,$6 Sandwich vs $180 Sandwich,$$$,Wagyumafia Cutlet Sandwich,Tokyo,Japan,$180.00,Kobe,
+Holiday Special,1,$710 Potluck Dinner - Holiday Special Part 1,n/a,Pampas Grill,Los Angeles,USA,$9.25,Pão De Queijo,Per dozen
+Holiday Special,1,$710 Potluck Dinner - Holiday Special Part 1,n/a,n/a,n/a,n/a,$15.00,Kiano's Kenyan Beef Samosas,"Homemade dish, price for ingredients make approx 30."
+Holiday Special,2,$192 Desserts - Holiday Special Part 2,n/a,The Pie Hole,Los Angeles,USA,$40.50,Mom's Apple Crumble Pie,Whole pie
+Holiday Special,2,$192 Desserts - Holiday Special Part 2,n/a,The Pie Hole,Los Angeles,USA,$42.00,Salted Chocolate Pie,Whole pie
+Holiday Special,2,$192 Desserts - Holiday Special Part 2,n/a,The Pie Hole,Los Angeles,USA,$42.00,Salted Caramel Pecan Pie,Whole pie
+Holiday Special,2,$192 Desserts - Holiday Special Part 2,n/a,The Pie Hole,Los Angeles,USA,$42.00,Earl Grey Tea Pie,Whole pie
+Holiday Special,2,$192 Desserts - Holiday Special Part 2,n/a,n/a,n/a,n/a,$25.00,Rie's Russian Roulette Croquem Bouche,"Homemade dish, price for ingredients"
+Holiday Special,3,$347 Prime Rib - Holiday Special Part 3,n/a,A Cut Above Butcher Shop,Los Angeles,USA,$347.19,Prime Dry Aged Rib Roast 8.47lbs,"Homemade dish, price for raw meat"
+Holiday Special,3,$347 Prime Rib - Holiday Special Part 3,n/a,A Cut Above Butcher Shop,Los Angeles,USA,$13.25,Half Pound Grassfed Burger,
+Holiday Special,3,$347 Prime Rib - Holiday Special Part 3,n/a,Sinuiji Chapsal Soonae,Los Angeles,USA,$10.99,Tteokbokki (Spicy Rice Cake),
+Holiday Special,3,$347 Prime Rib - Holiday Special Part 3,n/a,n/a,n/a,n/a,n/a,Kwesi's Ponche-de-Creme,West Indian version of eggnog
+One Stop,1,$1977 Japanese Grapes,n/a,Isetan Department Store,Tokyo,Japan,"$1,977.00",Ruby Roman Grapes,
+One Stop,2,$210 7-Course Seafood Dinner,n/a,Providence,Los Angeles,USA,$210.00,Seasonal Tasting Menu,
+One Stop,3,$1593 Bento Box,n/a,Nikko Masuzushi Honpo,Nikko,Japan,"$1,593.00",Nikko Buried Treasure Bento,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$,Kings Burger / Got Sushi?,Los Angeles,USA,$5.50,Salmon Nigiri,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$,Kings Burger / Got Sushi?,Los Angeles,USA,$4.09,Jr. Cheeseburger,No sides
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$,Kings Burger / Got Sushi?,Los Angeles,USA,$12.00,Kampachi 3 Way,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$,Kings Burger / Got Sushi?,Los Angeles,USA,$8.49,King's Special (Pastrami CB),No sides
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$$,Ototo,Los Angeles,USA,$23.00,Hirame Crudo,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$$,Ototo,Los Angeles,USA,$14.00,Ode To MOS Burger,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$$$,Tetsu,New York City,USA,$35.00,Masa Toro Roll,
+6,6,$10 Sushi & Burger vs $58 Sushi & Burger,$$$,Tetsu,New York City,USA,$23.00,Masa's Burger,
