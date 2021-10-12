@@ -1,3 +1,4 @@
+#Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.
 USE javaProjects;
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Sushi Stop','Bluefin Nigiri','USA','Los Angeles','$3 Sushi vs $250 Sushi','1','1');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Hamasaku','Kinmedai White Ponzu,Nigiri Platter,Cajun Crab Roll','USA','Los Angeles','$3 Sushi vs $250 Sushi','1','1');

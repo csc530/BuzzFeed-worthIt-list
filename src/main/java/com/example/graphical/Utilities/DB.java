@@ -38,6 +38,7 @@ public class DB{
 	}
 	
 	public static ArrayList<Restaurant> readFromCSV(File file) throws FileNotFoundException{
+//		Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		Scanner in = new Scanner(reader);
 		ArrayList<Restaurant> restaurants = new ArrayList<>();
@@ -209,18 +210,15 @@ public class DB{
 		return line.substring(0, line.indexOf(","));
 	}
 	
-	public static void main(String[] args) throws FileNotFoundException{
-		File file = new File("src/main/resources/com/example/graphical/SQLScript-fromCSV.sql");
-		BufferedReader reader = new BufferedReader(new FileReader(file));
-		
-	}
-	public static void main2(String[] args) throws IOException{
+
+	public static void main(String[] args) throws IOException{
 		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
 		File outFile = new File("src/main/resources/com/example/graphical/SQLScript-fromCSV.sql");
 		if(!outFile.exists())
 			System.out.println(outFile.createNewFile());
 		BufferedWriter writer = new BufferedWriter(new FileWriter(outFile));
 		PrintWriter out = new PrintWriter(writer);
+		out.println("#Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.");
 		out.println("USE javaProjects;");
 		for(Restaurant r : restaurants)
 		{
