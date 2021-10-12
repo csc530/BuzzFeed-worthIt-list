@@ -5,19 +5,58 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class Restaurant{
-	public static ArrayList<String> CategoryList = (ArrayList<String>) Arrays.asList(new String[]{"Diner", "Fast food", "Fancy", "Other", "Unspecified"});
-	private String name, notes, country, city;
-	private int id, season, episode;
+	private String name, notes, country, city,episodeName, season;
+	private int id, episode;
 	private ArrayList<FoodItem> foodItems;
 	
-	public Restaurant(String name, String notes, String country, String city, int id, int season, int episode, ArrayList<FoodItem> foodItems){
+	public Restaurant(String season, int episode, String episodeName, String name,String city,String country, String notes){
 		this.name = name;
 		this.notes = notes;
 		this.country = country;
 		this.city = city;
-		this.id = id;
+		this.episodeName = episodeName;
 		this.season = season;
 		this.episode = episode;
-		this.foodItems = foodItems;
+		foodItems = new ArrayList<FoodItem>();
+ 	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public String getNotes(){
+		return notes;
+	}
+	
+	public String getCountry(){
+		return country;
+	}
+	
+	public String getCity(){
+		return city;
+	}
+	
+	public String getEpisodeName(){
+		return episodeName;
+	}
+	
+	public String getSeason(){
+		return season;
+	}
+	
+	public int getId(){
+		return id;
+	}
+	
+	public int getEpisode(){
+		return episode;
+	}
+	
+	public ArrayList<FoodItem> getFoodItems(){
+		return foodItems;
+	}
+	
+	public void addItem(FoodItem item){
+		foodItems.add(item);
 	}
 }
