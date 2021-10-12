@@ -17,25 +17,25 @@ public class DB{
 	private static final String pw = "student";
 	private static final String url = "jdbc:mysql://localhost:3306/javaProjects";
 	
-	public static XYChart.Series<String, Integer> getRestaurants(){
-		XYChart.Series<String, Integer> salesData = new XYChart.Series<>();
-		String sql = "SELECT * FROM restaurants";
-		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
-		try(Connection conn = DriverManager.getConnection(url, user, pw);
-		    Statement statement = conn.createStatement();
-		    ResultSet resultSet = statement.executeQuery(sql))
-		{
-			//loop over the resultSet returned and build the XYChart data
-			while(resultSet.next())
-				salesData.getData().add(new XYChart.Data<>(resultSet.getString("company"), resultSet.getInt(2)));
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		
-		return salesData;
-	}
+//	public static XYChart.Series<String, Integer> getRestaurants(){
+//		XYChart.Series<String, Integer> salesData = new XYChart.Series<>();
+//		String sql = "SELECT * FROM restaurants";
+//		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
+//		try(Connection conn = DriverManager.getConnection(url, user, pw);
+//		    Statement statement = conn.createStatement();
+//		    ResultSet resultSet = statement.executeQuery(sql))
+//		{
+//			//loop over the resultSet returned and build the XYChart data
+//			while(resultSet.next())
+//				salesData.getData().add(new XYChart.Data<>(resultSet.getString("company"), resultSet.getInt(2)));
+//		}
+//		catch(Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//
+//		return salesData;
+//	}
 	
 	public static ArrayList<Restaurant> readFromCSV(File file) throws FileNotFoundException{
 //		Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.
@@ -107,69 +107,8 @@ public class DB{
 				if(test.split(",").length != 10 && test.charAt(test.length() - 1) == ',')
 					test += " ";
 				String data[] = test.split(",");
-//				for(int i = 0; i < data.length; i++)
-//				{
-//					//System.out.println(test);
-//					if(test.indexOf(",") < test.indexOf("\"") && test.contains(","))
-//						test = test.substring(test.indexOf(",") + 1);
-//					else if(test.indexOf(",") > test.indexOf("\"") && test.contains("\""))
-//					{
-//						int comma = test.substring(test.lastIndexOf("\"")).indexOf(",");
-//						test = test.substring(comma + 1);
-//					}
-//					else
-//					{
-//						i--;
-//						test = in.nextLine();
-//						line = line.concat("|" + test);
-//					}
-//
-//				}
+				//Structure of data arr
 				//Season,Episode,Episode Name,Price Point,Restaurant,City,Country,Cost,Item,Notes
-//				for(int i = 0; i < data.length; i++)
-//				{
-//					if(i == 4 || i == 8 || i == 9 || i == 7)
-//					{
-//						if(line.isBlank() || !line.contains(","))
-//						{
-//							data[i] = line;
-//							continue;
-//						}
-//						if(toNextCommDel(line).contains("\""))
-//						{
-//							if(i == 7)
-//								data[i] = line.substring(0, line.lastIndexOf("\"")).replaceAll("\"", "").replace(",", "");
-//							else
-//								data[i] = line.substring(0, line.lastIndexOf("\"")).replaceAll("\"", "");
-//							//System.out.println(data[i]);
-//							if(i != 9)
-//							{//not 9 because the next line will be outofbound because it's the end of the string(" is at the end so +2 after is nothing)
-//								//+2 to get past the next comma (so it doesn't just have an empty string for next piece of data)
-//								line = line.substring(line.lastIndexOf("\"")+2);
-//							}
-//							else
-//								line = line;
-//						}
-//						else
-//						{
-//							data[i] = toNextCommDel(line);
-//							line = line.substring(line.indexOf(",") + 1);
-//						}
-//						data[i] = data[i].replaceAll("\\$", "");
-//					}
-//					else if(i == 3)
-//					{
-//						data[i] = toNextCommDel(line);
-//						line = line.substring(line.indexOf(",") + 1);
-//					}
-//					else
-//					{
-//						data[i] = toNextCommDel(line);
-//						data[i] = data[i].replaceAll("\\$", "");
-//						line = line.substring(line.indexOf(",") + 1);
-//					}
-//					System.out.println(line);
-//				}
 				Restaurant restaurant = new Restaurant(data[0], Integer.parseInt(data[1]), data[2], data[4], data[5], data[6], data[8].replaceAll(";", ","));
 				FoodItem item;
 				if(data[7].isBlank() || data[7].isEmpty() || data[7].equalsIgnoreCase("n/a"))
