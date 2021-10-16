@@ -1,8 +1,6 @@
 package com.example.graphical.Models;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 
 public class Restaurant{
 	private String name, notes, country, city,episodeName, season;
@@ -58,5 +56,9 @@ public class Restaurant{
 	
 	public void addItem(FoodItem item){
 		foodItems.add(item);
+	}
+	
+	public void addItem(ArrayList<FoodItem> item){
+		foodItems.addAll(item);
 	}
 }
