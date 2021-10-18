@@ -36,19 +36,16 @@ public class DB{
 				String season = resultSet.getString("season");
 				int id = resultSet.getInt("id");
 				int episode = resultSet.getInt("episode");
-				ArrayList<FoodItem> foodItems = new ArrayList<>();
-				ResultSet foodSet = conn.createStatement().executeQuery("SELECT * FROM foods INNER JOIN foodsToRestaurants WHERE RestaurantID = " + id + ";");
+				restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
+				ResultSet foodSet = conn.createStatement().executeQuery("SELECT * FROM foodsToRestaurants INNER JOIN foods ON foodsToRestaurants.foodID = foods.ID WHERE RestaurantID = " + id + ";");
 				while(foodSet.next())
 				{
 					String foodName = foodSet.getString("name");
 					double price = foodSet.getDouble("price");
-					int pp = foodSet.getInt("pricePoint");
+					int pp = foodSet.getInt("price point");
 					FoodItem foodItem = new FoodItem(foodName, price, pp);
-					foodItems.add(foodItem);
-					System.out.println(foodItem.getPrice());
+					(restaurants.get(i)).addItem(foodItem);
 				}
-				restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
-				(restaurants.get(i)).addItem(foodItems);
 				i++;
 			}
 		}
