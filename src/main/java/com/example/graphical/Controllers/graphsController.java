@@ -2,6 +2,7 @@ package com.example.graphical.Controllers;
 
 import com.example.graphical.Models.*;
 import com.example.graphical.Utilities.DB;
+import com.example.graphical.Utilities.Session;
 import com.example.graphical.Utilities.Transition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,9 +39,9 @@ public class graphsController implements Initializable{
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
-		List<Restaurant> restaurants = DB.getRestaurants();
-		Collections.shuffle(restaurants);
-		restaurants = restaurants.subList(0,9);
+		List<Restaurant> restaurants = Session.getRestaurants();
+		if(restaurants.size()>12)//add a prompt to user if they'd like to refresh
+			restaurants=Session.randomRefreshRestaurants(10);
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
