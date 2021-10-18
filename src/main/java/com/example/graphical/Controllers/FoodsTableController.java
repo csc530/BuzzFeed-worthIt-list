@@ -15,16 +15,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FoodsTableController implements Initializable{
-	
 	@FXML
 	private TableView<FoodItem> table;
-	
 	@FXML
 	private TableColumn<FoodItem, String> name;
-	
 	@FXML
 	private TableColumn<FoodItem, Double> price;
-	
 	@FXML
 	private TableColumn<FoodItem, Integer> pricePoint;
 	
@@ -41,7 +37,7 @@ public class FoodsTableController implements Initializable{
 	@FXML
 	void toRestaurantsTable(ActionEvent event) throws IOException{
 		Session.setEditingRestaurant(null);
-		Transition.to(event,"tableView.fxml", "Restaurants Tables");
+		Transition.to(event, "tableView.fxml", "Restaurants Tables");
 	}
 	
 	@Override

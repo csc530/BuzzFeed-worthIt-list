@@ -51,7 +51,7 @@ public class tableController implements Initializable{
 		if(index > -1)
 		{
 			Session.setEditingRestaurant(Session.getRestaurants().get(index));
-			Transition.to(event, "foodsTableView.fxml",Session.getRestaurants().get(index).getName()+" Foods Table");
+			Transition.to(event, "foodsTableView.fxml", Session.getRestaurants().get(index).getName() + " Foods Table");
 		}
 		else
 			new Alert(Alert.AlertType.ERROR, "No Restaurant Selected", ButtonType.OK).show();

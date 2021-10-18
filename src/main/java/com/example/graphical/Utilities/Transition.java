@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Transition{
 	public static void to(ActionEvent event, String fxmlFile, String title) throws IOException{
-		FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Views/"+fxmlFile));
+		FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Views/" + fxmlFile));
 		Scene scene = new Scene(fxmlLoader.load());
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		stage.setTitle(title);

@@ -17,11 +17,11 @@ public class Session{
 		Session.editingRestaurant = editingRestaurant;
 	}
 	
-	public static ArrayList<Restaurant> refreshRestaurants() {
+	public static ArrayList<Restaurant> refreshRestaurants(){
 		return restaurants = DB.getRestaurants();
 	}
 	
-	public static ArrayList<Restaurant> refreshRestaurants(int size) {
+	public static ArrayList<Restaurant> refreshRestaurants(int size){
 		reduceToFirstX(size);
 		return restaurants;
 	}
@@ -35,11 +35,12 @@ public class Session{
 		return restaurants;
 	}
 	
-	public static ArrayList<Restaurant> randomRefreshRestaurants() {
+	public static ArrayList<Restaurant> randomRefreshRestaurants(){
 		refreshRestaurants();
 		return shuffle();
 	}
-	public static ArrayList<Restaurant> randomRefreshRestaurants(int size) {
+	
+	public static ArrayList<Restaurant> randomRefreshRestaurants(int size){
 		randomRefreshRestaurants();
 		reduceToFirstX(size);
 		return restaurants;

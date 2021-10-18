@@ -9,6 +9,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application{
+	public static void main(String[] args){
+		launch();
+	}
+	
 	@Override
 	public void start(Stage stage) throws IOException{
 		Session.randomRefreshRestaurants(20);
@@ -18,9 +22,5 @@ public class Application extends javafx.application.Application{
 		stage.setScene(scene);
 		stage.getIcons().add(new Image("logo.jpg"));
 		stage.show();
-	}
-	
-	public static void main(String[] args){
-		launch();
 	}
 }
