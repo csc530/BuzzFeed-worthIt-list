@@ -118,7 +118,7 @@ public class DB{
 				Restaurant restaurant = new Restaurant(data[0], Integer.parseInt(data[1]), data[2], data[4], data[5], data[6], data[8].replaceAll(";", ","));
 				FoodItem item;
 				if(data[7].isBlank() || data[7].isEmpty() || data[7].equalsIgnoreCase("n/a"))
-					item = new FoodItem(data[8], null, data[3].length());
+					item = null;
 				else
 					item = new FoodItem(data[8], Double.parseDouble(data[7].replaceAll("\\$", "")), data[3].length());
 				if(restaurants.size() > 0)
@@ -127,14 +127,16 @@ public class DB{
 						restaurants.get(i - 1).addItem(item);
 					else
 					{
-						restaurant.addItem(item);
+						if(item != null)
+							restaurant.addItem(item);
 						restaurants.add(restaurant);
 						i++;
 					}
 				}
 				else
 				{
-					restaurant.addItem(item);
+					if(item != null)
+						restaurant.addItem(item);
 					restaurants.add(restaurant);
 					i++;
 				}
