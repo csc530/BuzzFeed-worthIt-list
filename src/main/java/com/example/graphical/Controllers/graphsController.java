@@ -29,7 +29,7 @@ public class graphsController implements Initializable{
 	
 	@FXML
 	void addRestaurant(ActionEvent event) throws IOException{
-		Transition.to(event,"AddRestaurantView.fxml", "AddRestaurant");
+		Transition.to(event,"addRestuarantView.fxml", "AddRestaurant");
 	}
 	
 	@FXML

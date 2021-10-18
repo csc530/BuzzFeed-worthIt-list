@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.tableController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.addRestaurantController">
    <children>
       <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
             <HBox alignment="CENTER" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add foods" />
-                  <Button mnemonicParsing="false" onAction="#toGraph" text="View graph" />
+                  <Button mnemonicParsing="false" onAction="#addFoods" text="Add foods" />
+                  <Button mnemonicParsing="false" onAction="#create" text="Create" />
                </children>
             </HBox>
          </bottom>
@@ -33,51 +33,56 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Name: " />
-                        <TextField />
+                        <TextField fx:id="name" />
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="City: " />
-                        <TextField />
+                        <TextField fx:id="city" />
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Country: " />
-                        <TextField />
+                        <TextField fx:id="country" />
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Notes: " />
-                        <TextField />
+                        <TextField fx:id="notes" />
                      </children>
                   </HBox>
                   <Label text="Add to Worth It Series" />
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Season: " />
-                        <TextField />
+                        <TextField fx:id="season" />
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Episode: " />
-                        <Spinner />
+                        <Spinner fx:id="episode" />
                      </children>
                   </HBox>
-                  <HBox>
+                  <HBox alignment="CENTER">
                      <children>
                         <Label text="Episode Name: " />
-                        <TextField />
+                        <TextField fx:id="episodeName" />
                      </children>
                   </HBox>
+                  <Label fx:id="err" alignment="CENTER" stylesheets="@../Styles/style.css" text="Label" textAlignment="CENTER" textFill="#e82c2c" underline="true" wrapText="true">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </center>
