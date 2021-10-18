@@ -35,6 +35,7 @@ public class graphsController implements Initializable{
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
-		r.getFoodItems().stream().;
+			r.getFoodItems().stream().;
 		}
-		graph.getData().
+		graph.getData().addAll(series);
+	}
