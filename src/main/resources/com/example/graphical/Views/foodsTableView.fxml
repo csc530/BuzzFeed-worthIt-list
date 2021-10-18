@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.tableController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.FoodsTableController">
    <children>
       <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
@@ -18,7 +18,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add Restaurant" />
                   <Button mnemonicParsing="false" onAction="#toGraph" text="View graph" />
-                  <Button mnemonicParsing="false" onAction="#toFoodsTable" text="view Foods" />
+                  <Button mnemonicParsing="false" onAction="#toRestaurantsTable" text="view Restaurants" />
                </children>
             </HBox>
          </bottom>
@@ -35,13 +35,9 @@
          <center>
             <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
-                  <TableColumn fx:id="season" prefWidth="75.0" text="Season" />
-                  <TableColumn fx:id="city" prefWidth="75.0" text="City" />
-                  <TableColumn fx:id="episodeName" prefWidth="75.0" text="Episode Name" />
-                <TableColumn id="name" fx:id="name" prefWidth="75.0" text="Name" />
-                  <TableColumn fx:id="notes" prefWidth="75.0" text="Notes" />
-                  <TableColumn fx:id="episode" prefWidth="75.0" text="Epsiode" />
-                <TableColumn id="country" fx:id="country" prefWidth="75.0" text="Country" />
+                <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="price" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="pricePoint" prefWidth="75.0" text="Price Point" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
