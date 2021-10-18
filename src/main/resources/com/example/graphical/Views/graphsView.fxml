@@ -28,7 +28,7 @@
          <bottom>
             <HBox alignment="CENTER" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#addResto" text="Add Restaurant" />
+                  <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add Restaurant" />
                   <Button mnemonicParsing="false" onAction="#toTable" text="View Table" />
                </children>
             </HBox>

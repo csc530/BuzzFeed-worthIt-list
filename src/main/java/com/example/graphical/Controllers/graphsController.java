@@ -2,6 +2,7 @@ package com.example.graphical.Controllers;
 
 import com.example.graphical.Models.*;
 import com.example.graphical.Utilities.DB;
+import com.example.graphical.Utilities.Transition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +11,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,11 +27,13 @@ public class graphsController implements Initializable{
 	private NumberAxis yAx;
 	
 	@FXML
-	void addResto(ActionEvent event){
+	void addRestaurant(ActionEvent event) throws IOException{
+		Transition.to(event,"AddRestaurantView", "AddRestaurant");
 	}
 	
 	@FXML
-	void toTable(ActionEvent event){
+	void toTable(ActionEvent event) throws IOException{
+		Transition.to(event,"tableView", "Restaurants");
 	}
 	
 	@Override
