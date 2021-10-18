@@ -4,10 +4,7 @@ import com.example.graphical.Models.FoodItem;
 import com.example.graphical.Models.Restaurant;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,7 +33,12 @@ public class DB{
 				String season = resultSet.getString("season");
 				int id = resultSet.getInt("id");
 				int episode = resultSet.getInt("episode");
-				restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
+				if(notes == null)
+					notes = "";
+				if(episode < 1)
+					restaurants.add(new Restaurant(name, city, country, notes));
+				else
+					restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
 				ResultSet foodSet = conn.createStatement().executeQuery("SELECT * FROM foodsToRestaurants INNER JOIN foods ON foodsToRestaurants.foodID = foods.ID WHERE RestaurantID = " + id + ";");
 				while(foodSet.next())
 				{
@@ -234,5 +236,57 @@ public class DB{
 		out.close();
 		writer.close();
 		return restaurants;
+	}
+	
+	public static void upload(Restaurant restaurant){
+		String sql = "INSERT INTO restaurants (name, city,country) VALUES (?,?,?);";
+		int restID = -1;
+		try(
+				Connection conn = DriverManager.getConnection(url, user, pw);
+				PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"});
+		)
+		{
+			//bind the parameters
+			ps.setString(1, restaurant.getName());
+			ps.setString(2, restaurant.getCity());
+			ps.setString(3, restaurant.getCountry());
+			//execute the insert
+			ps.executeUpdate();
+			ResultSet rs;
+			rs = ps.getGeneratedKeys();
+			while(rs.next())
+				restID = rs.getInt(1);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		for(FoodItem f : restaurant.getFoodItems())
+		{
+			sql = "INSERT INTO foods(name, price, `price point`) values (?,?,?);";
+			try(
+					Connection conn = DriverManager.getConnection(url, user, pw);
+					PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"});
+			)
+			{
+				//add to foods
+				ps.setString(1, f.getName());
+				ps.setDouble(2, f.getPrice());
+				ps.setInt(3, f.getPricePoint());
+				ps.executeUpdate();
+				ResultSet rs;
+				rs = ps.getGeneratedKeys();
+				int foodID = -1;
+				while(rs.next())
+					foodID = rs.getInt(1);
+				sql = String.format("INSERT INTO foodsToRestaurants (foodID, RestaurantID) values (%d,%d)", foodID, restID);
+				conn.createStatement().executeUpdate(sql);
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
 	}
 }

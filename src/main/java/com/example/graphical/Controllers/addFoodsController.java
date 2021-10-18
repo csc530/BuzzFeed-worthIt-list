@@ -1,6 +1,7 @@
 package com.example.graphical.Controllers;
 
 import com.example.graphical.Models.FoodItem;
+import com.example.graphical.Utilities.DB;
 import com.example.graphical.Utilities.Session;
 import com.example.graphical.Utilities.Transition;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class addFoodsController implements Initializable{
@@ -42,7 +44,8 @@ public class addFoodsController implements Initializable{
 	
 	
 	@FXML
-	void done(ActionEvent event) throws IOException{
+	void done(ActionEvent event) throws IOException, SQLException{
+		DB.upload(Session.getEditingRestaurant());
 		Session.setEditingRestaurant(null);
 		Transition.to(event,"tableView.fxml", "Restaurant tables");
 	}
