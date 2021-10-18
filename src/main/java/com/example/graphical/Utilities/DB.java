@@ -160,6 +160,38 @@ public class DB{
 	}
 	
 	public static void main(String[] args) throws IOException{
+//		printRestaurants();
+		printFoods();
+	}
+	
+	private static void printFoods() throws IOException{
+		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
+		File outFile = new File("src/main/resources/com/example/graphical/SQLScriptFoods-fromCSV.sql");
+		if(!outFile.exists())
+			System.out.println(outFile.createNewFile());
+		BufferedWriter writer = new BufferedWriter(new FileWriter(outFile));
+		PrintWriter out = new PrintWriter(writer);
+		out.println("# Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.");
+		out.println("USE javaProjects;");
+		for(Restaurant r : restaurants)
+		{
+			for(FoodItem item:r.getFoodItems()			    )
+			{
+				String name = item.getName();
+				int pp = item.getPricePoint();
+				double price = item.getPrice();
+				out.format("INSERT INTO foods (name, price, `price point`) VALUES ('%s',%f,%d);\n", name.translateEscapes(),price,pp);
+				out.flush();
+				writer.flush();
+			}
+		}
+		out.close();
+		writer.close();
+		System.out.println(outFile.exists());
+		System.out.println(outFile.getName());
+		System.out.println(outFile.getAbsolutePath());
+	}
+	private static void printRestaurants() throws IOException{
 		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
 		File outFile = new File("src/main/resources/com/example/graphical/SQLScript-fromCSV.sql");
 		if(!outFile.exists())
@@ -187,6 +219,5 @@ public class DB{
 		System.out.println(outFile.exists());
 		System.out.println(outFile.getName());
 		System.out.println(outFile.getAbsolutePath());
-		
 	}
 }

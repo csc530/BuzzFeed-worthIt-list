@@ -12,6 +12,7 @@ import javafx.scene.chart.XYChart;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.stream.DoubleStream;
 
 public class graphsController implements Initializable{
 	@FXML
@@ -35,7 +36,9 @@ public class graphsController implements Initializable{
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
-			r.getFoodItems().stream().;
+			double price = r.getFoodItems().stream().mapToDouble(foodItem -> foodItem.getPrice()).sum();
+			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
 		}
 		graph.getData().addAll(series);
 	}
+}
