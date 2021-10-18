@@ -1,6 +1,6 @@
 package com.example.graphical.Controllers;
 
-import com.example.graphical.Models.Restaurant;
+import com.example.graphical.Models.*;
 import com.example.graphical.Utilities.DB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,7 +36,7 @@ public class graphsController implements Initializable{
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
-			double price = r.getFoodItems().stream().mapToDouble(foodItem -> foodItem.getPrice()).sum();
+			double price = r.getFoodItems().stream().mapToDouble(FoodItem::getPrice).sum();
 			//price/=r.getFoodItems().size();System.out.println(price);
 			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
 		}
