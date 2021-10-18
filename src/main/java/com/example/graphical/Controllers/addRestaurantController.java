@@ -7,8 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -28,7 +26,8 @@ public class addRestaurantController implements Initializable{
 	private Label err;
 	
 	@FXML
-	void addFoods(ActionEvent event){
+	void cancel(ActionEvent event) throws IOException{
+		Transition.to(event, "tableView.fxml", "Restaurant Tables");
 	}
 	
 	@FXML
@@ -40,7 +39,8 @@ public class addRestaurantController implements Initializable{
 		if(name.length() > 2 && city.length() > 2 && country.length() > 2)
 		{
 			Session.getRestaurants().add(new Restaurant(name, city, country, notes));
-			Transition.to(event, "tableView.fxml", "Restaurant Tables");
+			Session.setEditingRestaurant(Session.getRestaurants().get(Session.getRestaurants().size() - 1));
+			Transition.to(event, "addFoods.fxml", "Restaurant Tables");
 		}
 		else
 		{

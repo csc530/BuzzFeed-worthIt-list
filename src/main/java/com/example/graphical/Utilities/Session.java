@@ -4,10 +4,18 @@ import com.example.graphical.Models.Restaurant;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Session{
 	private static ArrayList<Restaurant> restaurants = DB.getRestaurants();
+	private static Restaurant editingRestaurant = null;
+	
+	public static Restaurant getEditingRestaurant(){
+		return editingRestaurant;
+	}
+	
+	public static void setEditingRestaurant(Restaurant editingRestaurant){
+		Session.editingRestaurant = editingRestaurant;
+	}
 	
 	public static ArrayList<Restaurant> refreshRestaurants() {
 		return restaurants = DB.getRestaurants();
