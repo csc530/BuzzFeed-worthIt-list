@@ -9,7 +9,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class DB{
@@ -21,9 +20,9 @@ public class DB{
 		String sql = "SELECT * FROM restaurants;";
 		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
 		ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
-		try(Connection conn = DriverManager.getConnection(url,user,pw);
+		try(Connection conn = DriverManager.getConnection(url, user, pw);
 		    Statement statement = conn.createStatement();
-			ResultSet resultSet = statement.executeQuery(sql))
+		    ResultSet resultSet = statement.executeQuery(sql))
 		{
 			int i = 0;
 			//loop over the resultSet returned
@@ -175,22 +174,20 @@ public class DB{
 		out.println("USE javaProjects;");
 		for(Restaurant r : restaurants)
 		{
-			for(FoodItem item:r.getFoodItems()			    )
+			for(FoodItem item : r.getFoodItems())
 			{
 				String name = item.getName();
 				int pp = item.getPricePoint();
 				double price = item.getPrice();
-				out.format("INSERT INTO foods (name, price, `price point`) VALUES ('%s',%f,%d);\n", name.translateEscapes(),price,pp);
+				out.format("INSERT INTO foods (name, price, `price point`) VALUES ('%s',%f,%d);\n", name.translateEscapes(), price, pp);
 				out.flush();
 				writer.flush();
 			}
 		}
 		out.close();
 		writer.close();
-		System.out.println(outFile.exists());
-		System.out.println(outFile.getName());
-		System.out.println(outFile.getAbsolutePath());
 	}
+	
 	private static void printRestaurants() throws IOException{
 		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
 		File outFile = new File("src/main/resources/com/example/graphical/SQLScript-fromCSV.sql");
@@ -216,8 +213,5 @@ public class DB{
 		}
 		out.close();
 		writer.close();
-		System.out.println(outFile.exists());
-		System.out.println(outFile.getName());
-		System.out.println(outFile.getAbsolutePath());
 	}
 }
