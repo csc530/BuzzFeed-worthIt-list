@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.graphical.Views.AddRestuarantView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.tableController">
+   <children>
+      <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add foods" />
+                  <Button mnemonicParsing="false" onAction="#toGraph" text="View graph" />
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <Label text="Restaurants" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </top>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Name: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="City: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Country: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Notes: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <Label text="Add to Worth It Series" />
+                  <HBox>
+                     <children>
+                        <Label text="Season: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Episode: " />
+                        <Spinner />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Episode Name: " />
+                        <TextField />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </AnchorPane>

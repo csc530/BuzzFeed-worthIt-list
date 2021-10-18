@@ -35,7 +35,8 @@ public class tableController implements Initializable{
 	private TableColumn<Restaurant, String> notes;
 	
 	@FXML
-	void addRestaurant(ActionEvent event){
+	void addRestaurant(ActionEvent event) throws IOException{
+		Transition.to(event, "AddRestaurantView.fxml", "Restaurant graph");
 	}
 	
 	@FXML
