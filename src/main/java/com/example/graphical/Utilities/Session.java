@@ -23,9 +23,7 @@ public class Session{
 	}
 	
 	public static ArrayList<Restaurant> shuffle(){
-		System.out.println(restaurants.get(0).getName());
 		Collections.shuffle(restaurants);
-		System.out.println(restaurants.get(0).getName());
 		return restaurants;
 	}
 	
