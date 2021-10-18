@@ -18,10 +18,10 @@
          <center>
             <BarChart fx:id="graph" BorderPane.alignment="CENTER">
               <xAxis>
-                <CategoryAxis label="Restaurants" side="BOTTOM" />
+                <CategoryAxis label="Restaurants" side="BOTTOM" fx:id="xAx" />
               </xAxis>
               <yAxis>
-                <NumberAxis label="Average price" side="LEFT" />
+                <NumberAxis fx:id="yAx" label="Average price" side="LEFT" />
               </yAxis>
             </BarChart>
          </center>

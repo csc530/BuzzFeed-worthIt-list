@@ -119,8 +119,8 @@ INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) 
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Republique Restaurant','Spaghetti Rustichella','USA','Los Angeles','$15 Spaghetti vs $143 Spaghetti','4','9');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Top Round Roast Beef','Curly Fries','USA','Los Angeles','$3 Fries vs $100 Fries','4','10');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Lov','Kimchi Fries','Canada','Montreal','$3 Fries vs $100 Fries','4','10');
-INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Poutineville','La Crise Cardiaque ('The Heart Attack')','Canada','Montreal','$3 Fries vs $100 Fries','4','10');
-INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('John\'s Roast Pork','Cheesteak ('Onions Provolone')','USA','Philadelphia','$10 Cheesesteak vs $120 Cheesesteak','4','11');
+INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Poutineville','La Crise Cardiaque (The Heart Attack)','Canada','Montreal','$3 Fries vs $100 Fries','4','10');
+INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('John\'s Roast Pork','Cheesteak (Onions Provolone)','USA','Philadelphia','$10 Cheesesteak vs $120 Cheesesteak','4','11');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Gin & Pop','Local Mushroom Cheesesteak','USA','Philadelphia','$10 Cheesesteak vs $120 Cheesesteak','4','11');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Barclay Prime','Barclay Prime Cheesesteak','USA','Philadelphia','$10 Cheesesteak vs $120 Cheesesteak','4','11');
 INSERT INTO restaurants (name,notes,country,city,`episode name`,season,episode) VALUES ('Corner 28','Peking Duck Bun','USA','New York City','$2 Peking Duck vs $340 Peking Duck','4','12');

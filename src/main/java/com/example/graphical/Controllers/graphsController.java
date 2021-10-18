@@ -1,31 +1,40 @@
 package com.example.graphical.Controllers;
 
+import com.example.graphical.Models.Restaurant;
 import com.example.graphical.Utilities.DB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class graphsController implements Initializable{
+	@FXML
+	private BarChart<String, Double> graph;
+	@FXML
+	private CategoryAxis xAx;
+	@FXML
+	private NumberAxis yAx;
 	
 	@FXML
-	private BarChart<?, ?> graph;
-	
-	@FXML
-	void addResto(ActionEvent event) {
-	
+	void addResto(ActionEvent event){
 	}
 	
 	@FXML
-	void toTable(ActionEvent event) {
-	
+	void toTable(ActionEvent event){
 	}
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
-		DB.getRestaurants();
-	}
-}
+		Restaurant[] restaurants = DB.getRestaurants();
+		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
+		for(Restaurant r : restaurants)
+		{
+		r.getFoodItems().stream().;
+		}
+		graph.getData().

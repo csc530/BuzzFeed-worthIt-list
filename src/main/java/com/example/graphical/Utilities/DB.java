@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DB{
@@ -17,14 +18,14 @@ public class DB{
 	private static final String url = "jdbc:mysql://localhost:3306/javaProjects";
 	
 	public static Restaurant[] getRestaurants(){
-		String sql = "SELECT * FROM restaurants";
+		String sql = "SELECT * FROM restaurants;";
 		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
-		Restaurant[] restaurants = null;
-		try(Connection conn = DriverManager.getConnection(url); Statement statement = conn.createStatement(); ResultSet resultSet = statement.executeQuery(sql))
+		ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+		try(Connection conn = DriverManager.getConnection(url,user,pw);
+		    Statement statement = conn.createStatement();
+			ResultSet resultSet = statement.executeQuery(sql))
 		{
-			System.out.println("opsd");
 			int i = 0;
-			restaurants = new Restaurant[resultSet.getFetchSize()];
 			//loop over the resultSet returned
 			while(resultSet.next())
 			{
@@ -32,12 +33,12 @@ public class DB{
 				String notes = resultSet.getString("notes");
 				String country = resultSet.getString("country");
 				String city = resultSet.getString("city");
-				String episodeName = resultSet.getString("epName");
+				String episodeName = resultSet.getString("episode name");
 				String season = resultSet.getString("season");
 				int id = resultSet.getInt("id");
-				int episode = resultSet.getInt("ep");
+				int episode = resultSet.getInt("episode");
 				ArrayList<FoodItem> foodItems = new ArrayList<>();
-				ResultSet foodSet = statement.executeQuery("SELECT * FROM foods INNER JOIN foodsToRestaurants WHERE RestaurantID = " + id + ";");
+				ResultSet foodSet = conn.createStatement().executeQuery("SELECT * FROM foods INNER JOIN foodsToRestaurants WHERE RestaurantID = " + id + ";");
 				while(foodSet.next())
 				{
 					String foodName = foodSet.getString("name");
@@ -46,14 +47,14 @@ public class DB{
 					FoodItem foodItem = new FoodItem(foodName, price, pp);
 					foodItems.add(foodItem);
 				}
-				restaurants[i] = new Restaurant(season, episode, episodeName, name, city, country, notes);
-				restaurants[i].addItem(foodItems);
+				restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
+				(restaurants.get(i)).addItem(foodItems);
 				i++;
 			}
 //			salesData.getData().add(new XYChart.Data<>(resultSet.getString("name"), resultSet.getInt(2)));
 		}
 		catch(Exception e) {e.printStackTrace();}
-		return restaurants;
+		return restaurants.toArray(new Restaurant[0]);
 	}
 	
 	public static ArrayList<Restaurant> readFromCSV(File file) throws FileNotFoundException{
