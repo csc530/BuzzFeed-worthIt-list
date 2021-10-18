@@ -18,6 +18,46 @@ public class Restaurant{
 		foodItems = new ArrayList<FoodItem>();
  	}
 	
+	public void setName(String name){
+		if(name.length()<3)
+			throw new IllegalArgumentException("Name must be at least 3 characters long.");
+		this.name = name;
+	}
+	
+	public void setNotes(String notes){
+		if(notes == null)
+		throw new IllegalArgumentException("Notes cannot be null.");
+		this.notes = notes;
+	}
+	
+	public void setCountry(String country){
+		if(country == null)
+			throw new IllegalArgumentException("Country cannot be null.");
+		this.country = country;
+	}
+	
+	public void setCity(String city){
+		if(city == null)
+		throw new IllegalArgumentException("city cannot be null.");
+		this.city = city;
+	}
+	
+	public void setEpisodeName(String episodeName){
+		if(episodeName == null)
+			throw new IllegalArgumentException("The episode name cannot be null.");
+		this.episodeName = episodeName;
+	}
+	
+	public void setSeason(String season){
+		if(season == null)
+			throw new IllegalArgumentException("season name cannot be null.");
+		this.season = season;
+	}
+	
+	public void setEpisode(int episode){
+		this.episode = episode;
+	}
+	
 	public String getName(){
 		return name;
 	}
@@ -58,7 +98,7 @@ public class Restaurant{
 		foodItems.add(item);
 	}
 	
-	public void addItem(ArrayList<FoodItem> item){
+	public void addItems(ArrayList<FoodItem> item){
 		foodItems.addAll(item);
 	}
 }
