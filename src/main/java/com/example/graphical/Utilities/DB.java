@@ -45,12 +45,12 @@ public class DB{
 					int pp = foodSet.getInt("pricePoint");
 					FoodItem foodItem = new FoodItem(foodName, price, pp);
 					foodItems.add(foodItem);
+					System.out.println(foodItem.getPrice());
 				}
 				restaurants.add(new Restaurant(season, episode, episodeName, name, city, country, notes));
 				(restaurants.get(i)).addItem(foodItems);
 				i++;
 			}
-//			salesData.getData().add(new XYChart.Data<>(resultSet.getString("name"), resultSet.getInt(2)));
 		}
 		catch(Exception e) {e.printStackTrace();}
 		return restaurants.toArray(new Restaurant[0]);
@@ -154,17 +154,35 @@ public class DB{
 		return false;
 	}
 	
-	private static String toNextCommDel(String line){
-		return line.substring(0, line.indexOf(","));
-	}
-	
 	public static void main(String[] args) throws IOException{
-//		printRestaurants();
-		printFoods();
+		ArrayList<Restaurant> restaurants = printRestaurants();
+		ArrayList<FoodItem> foods = printFoods(restaurants);
+		printJunction(restaurants, foods);
 	}
 	
-	private static void printFoods() throws IOException{
-		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
+	private static void printJunction(ArrayList<Restaurant> restaurants, ArrayList<FoodItem> foods) throws IOException{
+		File outFile = new File("src/main/resources/com/example/graphical/SQLScriptJunctionTable-fromCSV.sql");
+		if(!outFile.exists())
+			System.out.println(outFile.createNewFile());
+		BufferedWriter writer = new BufferedWriter(new FileWriter(outFile));
+		PrintWriter out = new PrintWriter(writer);
+		out.println("# Huge s/o to pauseforasecond for the spreadsheet based on the BuzzFeed show Is It Worth It.");
+		out.println("USE javaProjects;");
+		for(Restaurant r : restaurants)
+		{
+			for(FoodItem f : r.getFoodItems())
+			{
+				out.format("INSERT INTO foodsToRestaurants (foodID, RestaurantID) VALUES ('%d',%d);\n", restaurants.indexOf(r) + 1, foods.indexOf(f) + 1);
+				out.flush();
+				writer.flush();
+			}
+		}
+		out.close();
+		writer.close();
+	}
+	
+	private static ArrayList<FoodItem> printFoods(ArrayList<Restaurant> restaurants) throws IOException{
+		ArrayList<FoodItem> foodItems = new ArrayList<>();
 		File outFile = new File("src/main/resources/com/example/graphical/SQLScriptFoods-fromCSV.sql");
 		if(!outFile.exists())
 			System.out.println(outFile.createNewFile());
@@ -176,6 +194,7 @@ public class DB{
 		{
 			for(FoodItem item : r.getFoodItems())
 			{
+				foodItems.add(item);
 				String name = item.getName();
 				int pp = item.getPricePoint();
 				double price = item.getPrice();
@@ -186,9 +205,10 @@ public class DB{
 		}
 		out.close();
 		writer.close();
+		return foodItems;
 	}
 	
-	private static void printRestaurants() throws IOException{
+	private static ArrayList<Restaurant> printRestaurants() throws IOException{
 		ArrayList<Restaurant> restaurants = readFromCSV(new File("./src/main/resources/com/example/graphical/Restaurant List.csv"));
 		File outFile = new File("src/main/resources/com/example/graphical/SQLScript-fromCSV.sql");
 		if(!outFile.exists())
@@ -213,5 +233,6 @@ public class DB{
 		}
 		out.close();
 		writer.close();
+		return restaurants;
 	}
 }
