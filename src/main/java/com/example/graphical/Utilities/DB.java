@@ -17,12 +17,12 @@ public class DB{
 	private static final String url = "jdbc:mysql://localhost:3306/javaProjects";
 	
 	public static Restaurant[] getRestaurants(){
-		//language=MySQL
 		String sql = "SELECT * FROM restaurants";
 		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
 		Restaurant[] restaurants = null;
-		try(Connection conn = DriverManager.getConnection(url, user, pw); Statement statement = conn.createStatement(); ResultSet resultSet = statement.executeQuery(sql))
+		try(Connection conn = DriverManager.getConnection(url); Statement statement = conn.createStatement(); ResultSet resultSet = statement.executeQuery(sql))
 		{
+			System.out.println("opsd");
 			int i = 0;
 			restaurants = new Restaurant[resultSet.getFetchSize()];
 			//loop over the resultSet returned

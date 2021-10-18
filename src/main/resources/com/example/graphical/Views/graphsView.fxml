@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.graphical.Controllers.graphsController">
-	<padding>
-		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-	</padding>
-	
-	<Label fx:id="welcomeText"/>
-	<Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.graphsController">
+   <children>
+      <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <BarChart fx:id="graph" BorderPane.alignment="CENTER">
+              <xAxis>
+                <CategoryAxis label="Restaurants" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Average price" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addResto" text="Add Restaurant" />
+                  <Button mnemonicParsing="false" onAction="#toTable" text="View Table" />
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <Label text="BuzzFeed's Worth It Restaraunts and Dishes" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </top>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
