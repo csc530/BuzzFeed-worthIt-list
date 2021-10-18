@@ -16,7 +16,7 @@ public class DB{
 	public static ArrayList<Restaurant> getRestaurants(){
 		String sql = "SELECT * FROM restaurants;";
 		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
-		ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+		ArrayList<Restaurant> restaurants = new ArrayList<>();
 		try(Connection conn = DriverManager.getConnection(url, user, pw);
 		    Statement statement = conn.createStatement();
 		    ResultSet resultSet = statement.executeQuery(sql))
@@ -243,7 +243,7 @@ public class DB{
 		int restID = -1;
 		try(
 				Connection conn = DriverManager.getConnection(url, user, pw);
-				PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"});
+				PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"})
 		)
 		{
 			//bind the parameters
@@ -266,7 +266,7 @@ public class DB{
 			sql = "INSERT INTO foods(name, price, `price point`) values (?,?,?);";
 			try(
 					Connection conn = DriverManager.getConnection(url, user, pw);
-					PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"});
+					PreparedStatement ps = conn.prepareStatement(sql, new String[]{"ID"})
 			)
 			{
 				//add to foods

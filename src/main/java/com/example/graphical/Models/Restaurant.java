@@ -4,30 +4,30 @@ import java.util.ArrayList;
 
 public class Restaurant{
 	private String name, notes, country, city, episodeName, season;
-	private int id, episode;
+	private int episode;
 	private ArrayList<FoodItem> foodItems;
 	
 	public Restaurant(String name){
 		setName(name);
-		foodItems = new ArrayList<FoodItem>();
+		foodItems = new ArrayList<>();
 	}
 	
 	public Restaurant(String name, String country){
 		this(name);
 		setCountry(country);
-		foodItems = new ArrayList<FoodItem>();
+		foodItems = new ArrayList<>();
 	}
 	
 	public Restaurant(String name, String city, String country){
 		this(name, country);
 		setCity(city);
-		foodItems = new ArrayList<FoodItem>();
+		foodItems = new ArrayList<>();
 	}
 	
 	public Restaurant(String name, String city, String country, String notes){
 		this(name, country, city);
 		setNotes(notes);
-		foodItems = new ArrayList<FoodItem>();
+		foodItems = new ArrayList<>();
 	}
 	
 	public Restaurant(String season, int episode, String episodeName, String name, String city, String country, String notes){
@@ -35,7 +35,7 @@ public class Restaurant{
 		setEpisode(episode);
 		setEpisodeName(episodeName);
 		setSeason(season);
-		foodItems = new ArrayList<FoodItem>();
+		foodItems = new ArrayList<>();
 	}
 	
 	public String getName(){
@@ -96,10 +96,6 @@ public class Restaurant{
 		if(season == null)
 			throw new IllegalArgumentException("season name cannot be null.");
 		this.season = season;
-	}
-	
-	public int getId(){
-		return id;
 	}
 	
 	public int getEpisode(){

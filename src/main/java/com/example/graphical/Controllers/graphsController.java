@@ -38,11 +38,11 @@ public class graphsController implements Initializable{
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
 		List<Restaurant> restaurants = Session.getRestaurants();
-		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
+		XYChart.Series<String, Double> series = new XYChart.Series<>();
 		for(Restaurant r : restaurants)
 		{
 			double price = r.getFoodItems().stream().mapToDouble(FoodItem::getPrice).sum();
-			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
+			series.getData().add(new XYChart.Data<>(r.getName(), price));
 		}
 		graph.getData().addAll(series);
 	}

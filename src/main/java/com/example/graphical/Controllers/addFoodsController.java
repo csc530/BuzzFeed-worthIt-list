@@ -12,7 +12,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class addFoodsController implements Initializable{
@@ -36,7 +35,7 @@ public class addFoodsController implements Initializable{
 	private Label err;
 	
 	@FXML
-	void done(ActionEvent event) throws IOException, SQLException{
+	void done(ActionEvent event) throws IOException{
 		DB.upload(Session.getEditingRestaurant());
 		Session.setEditingRestaurant(null);
 		Transition.to(event, "tableView.fxml", "Restaurant tables");
