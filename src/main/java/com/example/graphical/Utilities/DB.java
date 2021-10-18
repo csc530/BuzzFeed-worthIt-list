@@ -50,6 +50,7 @@ public class DB{
 			}
 		}
 		catch(Exception e) {e.printStackTrace();}
+		restaurants.removeIf(r -> r.getFoodItems().size() == 0);
 		return restaurants.toArray(new Restaurant[0]);
 	}
 	
