@@ -1,4 +1,16 @@
 .root{
     font-size: large;
-    color: black
+    -fx-text-fill: #0f1c1a;
+    -fx-background-color: linear-gradient(white, rgba(16, 66, 185, 0.66));
+    -fx-font-family: "Helvetica Neue", sans;
+}
+.title{
+    -fx-text-fill: red;
+    -fx-alignment: center;
+}
+#chart{
+    -fx-border-color: rgba(29, 208, 126, 0.5);
+}
+.button{
+    -fx-border-radius: 150px;
 }

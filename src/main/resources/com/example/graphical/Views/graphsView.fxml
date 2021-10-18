@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -15,28 +16,34 @@
    <children>
       <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <BarChart fx:id="graph" BorderPane.alignment="CENTER">
+            <BarChart id="graph" fx:id="graph" title="Average dish prices" BorderPane.alignment="CENTER">
               <xAxis>
                 <CategoryAxis label="Restaurants" side="BOTTOM" fx:id="xAx" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAx" label="Average price" side="LEFT" />
+                <NumberAxis fx:id="yAx" label="Price" side="LEFT" />
               </yAxis>
             </BarChart>
          </center>
          <bottom>
-            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="50.0" spacing="25.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add Restaurant" />
-                  <Button mnemonicParsing="false" onAction="#toTable" text="View Table" />
+                  <Button mnemonicParsing="false" onAction="#addRestaurant" prefHeight="45.0" prefWidth="100.0" text="Add Restaurant" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#toTable" prefHeight="45.0" prefWidth="100.0" text="View Table" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#viewAll" prefHeight="45.0" prefWidth="100.0" text="View All Restaurants" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#view10" prefHeight="45.0" prefWidth="100.0" text="view 10 Restaurants" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
          </bottom>
          <top>
-            <Label text="BuzzFeed's Worth It Restaraunts and Dishes" BorderPane.alignment="CENTER">
+            <Label text="BuzzFeed's Worth It Restaraunts and Dishes" textFill="#f50202" wrapText="true" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="23.0" />
+                  <Font size="24.0" />
                </font>
+               <styleClass>
+                  <String fx:value="title" />
+                  <String fx:value="title" />
+               </styleClass>
             </Label>
          </top>
          <padding>

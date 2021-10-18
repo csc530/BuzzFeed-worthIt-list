@@ -40,8 +40,6 @@ public class graphsController implements Initializable{
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
 		List<Restaurant> restaurants = Session.getRestaurants();
-		if(restaurants.size()>11)//add a prompt to user if they'd like to refresh
-			restaurants=Session.randomRefreshRestaurants(10);
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
@@ -49,5 +47,17 @@ public class graphsController implements Initializable{
 			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
 		}
 		graph.getData().addAll(series);
+	}
+	
+	@FXML
+	void view10(ActionEvent event) throws IOException{
+		Session.randomRefreshRestaurants(10);
+		Transition.to(event,"graphsView.fxml", "BuzzFeed's Worth It graph");
+	}
+	
+	@FXML
+	void viewAll(ActionEvent event) throws IOException{
+		Session.randomRefreshRestaurants();
+		Transition.to(event,"graphsView.fxml", "BuzzFeed's Worth It graph");
 	}
 }

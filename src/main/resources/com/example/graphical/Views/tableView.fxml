@@ -14,18 +14,18 @@
    <children>
       <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
-            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#addRestaurant" text="Add Restaurant" />
-                  <Button mnemonicParsing="false" onAction="#toGraph" text="View graph" />
-                  <Button mnemonicParsing="false" onAction="#toFoodsTable" text="view Foods" />
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#addRestaurant" prefHeight="45.0" prefWidth="100.0" text="Add Restaurant" textAlignment="CENTER" wrapText="true" />
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#toGraph" prefHeight="45.0" prefWidth="100.0" text="View graph" textAlignment="CENTER" wrapText="true" />
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#toFoodsTable" prefHeight="45.0" prefWidth="100.0" text="view Foods" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
          </bottom>
          <top>
-            <Label text="Restaurants" BorderPane.alignment="CENTER">
+            <Label styleClass="title" text="Restaurants" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="23.0" />
+                  <Font size="43.0" />
                </font>
             </Label>
          </top>
