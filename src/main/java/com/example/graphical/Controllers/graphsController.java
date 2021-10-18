@@ -37,6 +37,7 @@ public class graphsController implements Initializable{
 		for(Restaurant r : restaurants)
 		{
 			double price = r.getFoodItems().stream().mapToDouble(foodItem -> foodItem.getPrice()).sum();
+			//price/=r.getFoodItems().size();System.out.println(price);
 			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
 		}
 		graph.getData().addAll(series);
