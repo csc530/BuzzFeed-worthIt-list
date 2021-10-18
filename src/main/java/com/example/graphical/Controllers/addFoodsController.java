@@ -14,7 +14,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class addFoodsController implements Initializable{
-	
+	@FXML
+	private Label title;
 	@FXML
 	private TableView<FoodItem> foodsTable;
 	
@@ -82,6 +83,7 @@ public class addFoodsController implements Initializable{
 		ppCol.setCellValueFactory(new PropertyValueFactory<>("pricePoint"));
 		priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
 		nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+		title.setText("Add Dishes to " +Session.getEditingRestaurant().getName());
 		refresh();
 	}
 	

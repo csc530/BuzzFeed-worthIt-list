@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.addFoodsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphical.Controllers.addFoodsController">
    <children>
       <BorderPane prefHeight="460.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
@@ -26,7 +26,7 @@
             </HBox>
          </bottom>
          <top>
-            <Label text="Restaurants" BorderPane.alignment="CENTER">
+            <Label fx:id="title" text="Add Dishes to" BorderPane.alignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>
@@ -36,7 +36,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <left>
-            <TableView fx:id="foodsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="foodsTable" prefHeight="427.0" prefWidth="259.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
                 <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
@@ -48,7 +48,7 @@
             </TableView>
          </left>
          <right>
-            <VBox alignment="CENTER" prefHeight="427.0" prefWidth="364.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="427.0" prefWidth="317.0" spacing="5.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER">
                      <children>
