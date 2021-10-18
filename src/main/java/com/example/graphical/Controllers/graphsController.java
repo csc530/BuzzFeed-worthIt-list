@@ -29,18 +29,18 @@ public class graphsController implements Initializable{
 	
 	@FXML
 	void addRestaurant(ActionEvent event) throws IOException{
-		Transition.to(event,"AddRestaurantView", "AddRestaurant");
+		Transition.to(event,"AddRestaurantView.fxml", "AddRestaurant");
 	}
 	
 	@FXML
 	void toTable(ActionEvent event) throws IOException{
-		Transition.to(event,"tableView", "Restaurants");
+		Transition.to(event,"tableView.fxml", "Restaurants");
 	}
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
 		List<Restaurant> restaurants = Session.getRestaurants();
-		if(restaurants.size()>12)//add a prompt to user if they'd like to refresh
+		if(restaurants.size()>11)//add a prompt to user if they'd like to refresh
 			restaurants=Session.randomRefreshRestaurants(10);
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)

@@ -14,9 +14,7 @@ public class Session{
 	}
 	
 	public static ArrayList<Restaurant> refreshRestaurants(int size) {
-		List<Restaurant> temp = DB.getRestaurants().subList(0, size);
-		restaurants.removeIf(r->true);
-		restaurants.addAll(temp);
+		reduceToFirstX(size);
 		return restaurants;
 	}
 	
@@ -25,7 +23,9 @@ public class Session{
 	}
 	
 	public static ArrayList<Restaurant> shuffle(){
+		System.out.println(restaurants.get(0).getName());
 		Collections.shuffle(restaurants);
+		System.out.println(restaurants.get(0).getName());
 		return restaurants;
 	}
 	
@@ -34,10 +34,14 @@ public class Session{
 		return shuffle();
 	}
 	public static ArrayList<Restaurant> randomRefreshRestaurants(int size) {
-		refreshRestaurants();
-		List<Restaurant> temp = DB.getRestaurants().subList(0, size);
-		restaurants.removeIf(r->true);
-		restaurants.addAll(temp);
+		randomRefreshRestaurants();
+		reduceToFirstX(size);
 		return restaurants;
+	}
+	
+	private static void reduceToFirstX(int size){
+		ArrayList<Restaurant> temp = new ArrayList<>(restaurants.subList(0, size));
+		restaurants.clear();
+		restaurants.addAll(temp);
 	}
 }

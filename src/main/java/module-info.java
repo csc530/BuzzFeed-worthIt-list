@@ -11,6 +11,10 @@ module com.example.graphical {
 	requires eu.hansolo.tilesfx;
 	requires java.sql;
 	
+	//all me
+	 opens com.example.graphical.Models to javafx.base;
+	 
+	 
 	opens com.example.graphical to javafx.fxml;
 	exports com.example.graphical;
 	exports com.example.graphical.Controllers;

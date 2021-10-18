@@ -48,7 +48,7 @@ public class tableController implements Initializable{
 	
 	@FXML
 	void toGraph(ActionEvent event) throws IOException{
-		Transition.to(event,"com/example/graphical/Views/graphsView.fxml","Restaurant graph");
+		Transition.to(event,"graphsView.fxml","Restaurant graph");
 	}
 	
 	@Override
@@ -56,7 +56,7 @@ public class tableController implements Initializable{
 		season.setCellValueFactory(new PropertyValueFactory<>("season"));
 		notes.setCellValueFactory(new PropertyValueFactory<>("notes"));
 		episode.setCellValueFactory(new PropertyValueFactory<>("episode"));
-		epName.setCellValueFactory(new PropertyValueFactory<>("epName"));
+		epName.setCellValueFactory(new PropertyValueFactory<>("episodeName"));
 		country.setCellValueFactory(new PropertyValueFactory<>("country"));
 		city.setCellValueFactory(new PropertyValueFactory<>("city"));
 		name.setCellValueFactory(new PropertyValueFactory<>("name"));
