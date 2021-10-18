@@ -11,8 +11,10 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
-import java.util.stream.DoubleStream;
 
 public class graphsController implements Initializable{
 	@FXML
@@ -32,12 +34,13 @@ public class graphsController implements Initializable{
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle){
-		Restaurant[] restaurants = DB.getRestaurants();
+		List<Restaurant> restaurants = DB.getRestaurants();
+		Collections.shuffle(restaurants);
+		restaurants = restaurants.subList(0,9);
 		XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 		for(Restaurant r : restaurants)
 		{
 			double price = r.getFoodItems().stream().mapToDouble(FoodItem::getPrice).sum();
-			//price/=r.getFoodItems().size();System.out.println(price);
 			series.getData().add(new XYChart.Data<String, Double>(r.getName(), price));
 		}
 		graph.getData().addAll(series);

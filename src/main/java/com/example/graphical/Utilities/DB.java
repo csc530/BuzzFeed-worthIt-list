@@ -16,7 +16,7 @@ public class DB{
 	private static final String pw = "student";
 	private static final String url = "jdbc:mysql://localhost:3306/javaProjects";
 	
-	public static Restaurant[] getRestaurants(){
+	public static ArrayList<Restaurant> getRestaurants(){
 		String sql = "SELECT * FROM restaurants;";
 		//using try with resources, we will open a connection, statement and resultSet to hold the data returned from the database
 		ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
@@ -51,7 +51,7 @@ public class DB{
 		}
 		catch(Exception e) {e.printStackTrace();}
 		restaurants.removeIf(r -> r.getFoodItems().size() == 0);
-		return restaurants.toArray(new Restaurant[0]);
+		return restaurants;
 	}
 	
 	public static ArrayList<Restaurant> readFromCSV(File file) throws FileNotFoundException{
