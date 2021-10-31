@@ -1,5 +1,7 @@
 create database javaProjects;
 use javaProjects;
+create user student identified by 'student';
+GRANT all privileges on student to javaProjects;
 create table if not exists foods
 (
     ID            int auto_increment,
