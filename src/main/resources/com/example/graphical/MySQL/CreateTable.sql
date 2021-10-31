@@ -1,3 +1,5 @@
+create database javaProjects;
+use javaProjects;
 create table if not exists foods
 (
     ID            int auto_increment,
